@@ -1,4 +1,4 @@
-prefix=/usr/local/bin
+prefix=/usr/local
 CFLAGS=-Wall -o
 
 all: argv0
@@ -8,7 +8,7 @@ argv0: argv0.c
 	strip $@
 
 install: argv0
-	install -m 775 $? "$(prefix)"
+	install -m 775 $? "$(prefix)"/bin
 
 clean:
 	rm -f argv0
