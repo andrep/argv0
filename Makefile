@@ -1,9 +1,10 @@
 prefix=/usr/local/bin
+CFLAGS=-Wall -o
 
 all: argv0
 
 argv0: argv0.c
-	gcc -Wall -o $@ $<
+	$(CC) $(CFLAGS) $@ $<
 	strip $@
 
 install: argv0
